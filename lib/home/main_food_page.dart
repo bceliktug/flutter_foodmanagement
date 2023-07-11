@@ -65,7 +65,7 @@ class _MainFoogPageState extends State<MainFoogPage> {
             ),
           ),
           //body
-          FoodPageBody()
+          Expanded(child: SingleChildScrollView(child: FoodPageBody()))
         ],
       ),
     );

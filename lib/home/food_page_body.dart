@@ -88,9 +88,88 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               Container(
                 margin: EdgeInsets.only(bottom: 2),
                 child: SmallText(text: "Food pairing"),
-              )
+              ),
             ],
           ),
+        ),
+        ListView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemCount: 10,
+          itemBuilder: ((context, index) {
+            return Container(
+              margin: EdgeInsets.only(
+                  left: Dimentions.width20,
+                  right: Dimentions.width20,
+                  bottom: Dimentions.height10),
+              child: Row(
+                children: [
+                  //iamge section
+                  Container(
+                    width: Dimentions.lisViewImgSize,
+                    height: Dimentions.lisViewImgSize,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(Dimentions.radius20),
+                      color: Colors.white38,
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage("assets/image/food0.png"),
+                      ),
+                    ),
+                  ),
+                  //text container
+                  Expanded(
+                    child: Container(
+                      height: Dimentions.lisTextContSize,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(Dimentions.radius20),
+                          bottomRight: Radius.circular(Dimentions.radius20),
+                        ),
+                        color: Colors.white,
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            left: Dimentions.width10,
+                            right: Dimentions.width10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            BigText(text: "Nutitious fruit meal in China"),
+                            SizedBox(
+                              height: Dimentions.height10,
+                            ),
+                            SmallText(text: "With chinese characteristics"),
+                            SizedBox(
+                              height: Dimentions.height10,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconAndTextWidget(
+                                    icon: Icons.circle_sharp,
+                                    text: "Normal",
+                                    iconColor: AppColors.iconColor1),
+                                IconAndTextWidget(
+                                    icon: Icons.location_on,
+                                    text: "1.7km",
+                                    iconColor: AppColors.mainColor),
+                                IconAndTextWidget(
+                                    icon: Icons.access_time_rounded,
+                                    text: "32min",
+                                    iconColor: AppColors.iconColor2),
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            );
+          }),
         )
       ],
     );
