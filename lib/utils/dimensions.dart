@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class Dimentions {
+class Dimensions {
   static double screenHeight = Get.context!.height;
   static double screenWidth = Get.context!.width;
 
@@ -24,6 +24,7 @@ class Dimentions {
 
   //Text font sized
   static double font20 = screenHeight / 42.2;
+  static double font26 = screenHeight / 32.46;
 
   //BorderRadius velues
   static double radius15 = screenHeight / 56.27;
@@ -32,8 +33,12 @@ class Dimentions {
 
 //Icon Size
   static double iconSize24 = screenHeight / 35.17;
+  static double iconSize16 = screenHeight / 52.75;
 
 //list view size
-static double lisViewImgSize = screenWidth / 3.25; //120
-static double lisTextContSize = screenWidth / 3.9; //100
+  static double lisViewImgSize = screenWidth / 3.25; //120
+  static double lisTextContSize = screenWidth / 3.9; //100
+
+//popular food bg img
+  static double popularFoodImgSize = screenHeight / 2.41; //350
 }
